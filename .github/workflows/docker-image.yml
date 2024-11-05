@@ -19,9 +19,9 @@ jobs:
         username: ${{ secrets.DOCKER_USERNAME }}
         password: ${{ secrets.DOCKER_PASSWORD }}
 
-    - name: Push
+    - name: Build and push
       uses: docker/build-push-action@v4
-      run: |
-        docker build . --file Dockerfile --tag earendil25/nodejs-ci:v1.0
-        docker push earendil25/nodejs-ci:v1.0
+      with:
+        push: true
+        tags: earendil25/nodejs-ci:v1.0
 
