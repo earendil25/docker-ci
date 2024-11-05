@@ -23,5 +23,5 @@ jobs:
       uses: docker/build-push-action@v4
       run: |
         docker build . --file Dockerfile --tag earendil25/nodejs-ci:v1.0
-      docker push earendil25/nodejs-ci:v1.0
+        docker push earendil25/nodejs-ci:v1.0
 
